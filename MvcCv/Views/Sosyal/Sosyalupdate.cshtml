@@ -1,0 +1,27 @@
+﻿@model MvcCv.Models.Entity.TblSosyal
+@{
+    ViewBag.Title = "Sosyalupdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="resume-section-content">
+    <form method="post">
+        <h2 class="mb-5">Sosyal Medya Güncelleme Sayfası</h2>
+
+        @Html.HiddenFor(x => x.SosyalID)
+        <label>Sosyal Medya İsmi</label>
+        @Html.TextBoxFor(x => x.SoyalName, new { @class = "form-control" })
+        <br />
+        <label>Sosyal Medya Link</label>
+        @Html.TextBoxFor(x => x.SoyalLink, new { @class = "form-control" })
+        <br />
+        label>Sosyal Medya İcon</label>
+        @Html.TextBoxFor(x => x.Sosyalİcon, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-info"> Sosyal Medya Güncelle</button>
+    </form>
+
+
+</div>
+
+

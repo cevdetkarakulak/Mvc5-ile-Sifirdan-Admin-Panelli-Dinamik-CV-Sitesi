@@ -1,0 +1,25 @@
+﻿@model MvcCv.Models.Entity.TblAward
+@{
+    ViewBag.Title = "AwardUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="resume-section-content">
+    <form method="post">
+        <h2 class="mb-5">Sertifika Güncelleme Sayfası</h2>
+
+        <label>Sertifika Açıklama</label>
+        @Html.TextBoxFor(x => x.explanation, new { @class = "form-control" })
+        <br />
+        <label>Sertifika Tarih</label>
+        @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-info"> Sertifika  Güncelle</button>
+        <a href="/Award/AwardDelete/@ViewBag.d" class="btn btn-danger">Sil</a>
+       
+    </form>
+
+
+</div>
+
+

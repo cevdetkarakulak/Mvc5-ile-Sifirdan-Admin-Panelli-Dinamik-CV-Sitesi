@@ -1,0 +1,23 @@
+﻿@model  MvcCv.Models.Entity.TblSkill
+@{
+    ViewBag.Title = "SkillUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="resume-section-content">
+    <form method="post">
+        <h2 class="mb-5">Yetenek Güncelleme Sayfası</h2>
+
+        @Html.HiddenFor(x=>x.SkillID)
+        <label>Yetebek İsmi</label>
+        @Html.TextBoxFor(x => x.SkillName, new { @class = "form-control" })
+        <br />
+        <label>Yetebek Derece</label>
+        @Html.TextBoxFor(x => x.SkillValue, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-info"> Yeteneği Güncelle</button>
+    </form>
+
+
+</div>
+

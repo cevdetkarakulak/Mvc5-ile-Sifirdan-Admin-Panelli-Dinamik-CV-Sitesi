@@ -1,0 +1,36 @@
+﻿@model MvcCv.Models.Entity.TblEdication
+@{
+    ViewBag.Title = "EdicationUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div>
+    <div class="resume-section-content">
+        <form method="post">
+            <h2 class="mb-5">Eğitim Güncelleme Sayfası</h2>
+
+            @Html.Label("Başlık")
+            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Title, "", new { @style = "color:red" })
+            <br />
+            @Html.Label("Alt Başlık1")
+            @Html.TextBoxFor(x => x.Subitle1, new { @class = "form-control" })
+            <br />
+            @Html.Label("Alt Başlık2")
+            @Html.TextBoxFor(x => x.Subitle2, new { @class = "form-control" })
+            <br />
+            @Html.Label("Tarih")
+            @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+            <br />
+            @Html.Label("GNO")
+            @Html.TextBoxFor(x => x.GNO, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.GNO, "", new { @style = "color:blue" })
+            <br />
+            <button class="btn btn-info"> Eğitim Güncele</button>
+        </form>
+
+
+    </div>
+</div>
+

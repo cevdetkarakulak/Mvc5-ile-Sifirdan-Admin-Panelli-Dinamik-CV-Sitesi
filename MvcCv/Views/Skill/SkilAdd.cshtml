@@ -1,0 +1,23 @@
+﻿@model MvcCv.Models.Entity.TblSkill 
+@{
+    ViewBag.Title = "SkilAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="resume-section-content">
+    <form method="post">
+        <h2 class="mb-5">Yetenek Ekleme Sayfası</h2>
+
+        <label>Yetenek Adı</label>
+        @Html.TextBoxFor(x=>x.SkillName, new {@class="form-control" })
+        <br />
+        <label>Yetebek Derece</label>
+        @Html.TextBoxFor(x=>x.SkillValue,new {@class="form-control" })
+       <br />
+        <button class="btn btn-info"> Yeteneği Kaydet</button>
+    </form>
+
+
+</div>
+
+

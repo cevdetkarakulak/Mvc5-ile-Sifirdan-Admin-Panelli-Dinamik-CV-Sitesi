@@ -1,0 +1,26 @@
+﻿@model MvcCv.Models.Entity.TblExperience
+@{
+    ViewBag.Title = "ExperienceUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Deneyim Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.ExperienceID)
+    @Html.Label("Deneyim ID")
+    @Html.TextBoxFor(x => x.ExperienceID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.Subitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.Explanation, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>

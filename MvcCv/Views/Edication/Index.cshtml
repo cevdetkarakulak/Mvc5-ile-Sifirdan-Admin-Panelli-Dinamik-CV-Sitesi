@@ -1,0 +1,37 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblEdication>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Eğitim Listeleme</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>
+        <th>Alt Başlık 2</th>
+        <th>GNO</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EdicationID</td>
+            <td>@item.Title</td>
+            <td>@item.Subitle1</td>
+            <td>@item.Subitle2</td>
+            <td>@item.GNO</td>
+            <td>@item.Date</td>
+            <td><a href="/Edication/EdicationDelete/@item.EdicationID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Edication/EdicationUpdate/@item.EdicationID" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+
+
+</table>
+<a href="/Edication/EdicationAdd" class="btn btn-primary">Eğitim Ekle</a>

@@ -1,0 +1,35 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblAbout>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Hakkımda Düzenleme Sayfası</h2>
+<form method="post">
+    @foreach (var item in Model)
+    {
+        <label>Ad</label>
+        <input type="text" class="form-control" name="Name" value="@item.Name" />
+        <br />
+        <label>Soyad</label>
+        <input type="text" class="form-control" name="SurName" value=@item.SurName />
+        <br />
+        <label>Adres</label>
+        <input type="text" class="form-control" name="Adress" value=@item.Adress />
+        <br />
+        <label>E Posta</label>
+        <input type="text" class="form-control" name="Mail" value=@item.Mail />
+        <br />
+        <label>Telefon</label>
+        <input type="text" class="form-control" name="Phone" value=@item.Phone />
+        <br />
+        <label>Resim</label>
+        <input type="text" class="form-control" name="ImageUrl" value=@item.ImageUrl />
+        <br />
+        <label>Açıklma</label>
+        <textarea class="form-control" name="Description">@item.Description</textarea>
+    }
+    <br />
+    <button class="btn btn-success"> Güncelle</button>
+</form>
